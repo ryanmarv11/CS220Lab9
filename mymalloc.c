@@ -16,7 +16,7 @@ void *malloc(size_t size)
 		exit(1);
 	}
 	char *ptr = mallocp(size);
-	printf("malloc(%d) = %p\n", (int)size, ptr);
+	fprintf(stderr,"malloc(%d) = %p\n",(int)size,ptr);
 	return ptr;
 }
 
@@ -35,7 +35,7 @@ void free(void *ptr)
 		exit(1);
 	}
 	freep(ptr);
-	printf("free(%p)\n",ptr);
+	fprintf(stderr,"free(%p)\n",ptr);
 }
 #endif
 
